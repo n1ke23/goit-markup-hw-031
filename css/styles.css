@@ -14,6 +14,7 @@ ul {
   list-style: none;
 }
 
+
 /* HEADER */
 
 /*  logo */
@@ -77,6 +78,8 @@ ul {
 /* Baner */
 
 .hero-title {
+  margin-top: 0px;
+  margin-bottom: 30px;
   font-family: Roboto;
   font-style: normal;
   font-weight: 900;
@@ -85,6 +88,13 @@ ul {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--interactive-text-color);
+  text-align: center;
+}
+
+.container-hero{
+ background-image: url(../images/baner.jpg);
+ width: 1600px;
+ height: 600px;
 }
 
 /* button */
@@ -96,8 +106,17 @@ ul {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
+  text-align: center;
   color: var(--interactive-text-color);
   background-color: var(--active-text-color);
+ /* новое */
+  display: inline-block;
+  min-width: 200px;
+  height: 50px;
+  border-color: var(--active-text-color);
+  border-radius: 4px;
+  padding: 10px 32px;
+  border: 1px solid transparent;
 }
 
 .radio-button {
@@ -167,8 +186,13 @@ ul {
 
 /* НАША КОМАНДА */
 
-.team {
+.container-team {
   background: #f5f4fa;
+  width: 1600px;
+}
+
+.container-team > .container {
+  margin: 0px;
 }
 
 .team-title {
@@ -206,6 +230,7 @@ ul {
 
 footer {
   background: #2f303a;
+  width: 1600px;
 }
 
 .logo-footer {
@@ -286,3 +311,41 @@ footer {
   color: var(--interactive-text-color);
   background: var(--active-text-color); /* на время*/
 }
+
+
+/* box */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* html {
+    box-sizing: border-box;
+
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: ;
+} */
+
+/* .header-container {
+  width: ;
+  height: ;
+
+
+} */
+
+
+
+
+.container {
+  width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
