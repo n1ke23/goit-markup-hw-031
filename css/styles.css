@@ -3,6 +3,7 @@
   --active-text-color: #2196f3;
   --title-text-color: #757575;
   --interactive-text-color: #ffffff;
+  --bg: #F5F4FA;
 }
 
 .link {
@@ -13,17 +14,34 @@
   color: var(--heading-text-color);
 }
 
-ul {
+.list {
   list-style: none;
   margin: 0;
   padding: 0;
 }
+
+.flex {
+  display: flex;
+}
+
+.container {
+  align-items: center;
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 
 /* HEADER */
 
 /*  logo */
 
 .logo {
+  padding-top: 24px;
+  padding-bottom: 25px;
+
   font-family: Raleway;
   font-style: normal;
   font-weight: 700;
@@ -38,8 +56,23 @@ ul {
 }
 
 /* Навигация */
+.main-nav {
+  display: flex;
+  align-items: center;
+}
 
 .site-nav {
+  display: flex;
+  margin-left: 93px;
+  
+}
+
+.site-nav .item +.item {
+  margin-left: 50px;
+}
+
+.site-nav .link {
+  /* display: block; */
   font-family: Roboto;
   font-weight: 500;
   font-size: 14px;
@@ -52,12 +85,16 @@ ul {
   color: var(--active-text-color);
 }
 
-.site-nav .link.current {
+.current {
   color: var(--active-text-color);
 }
 
 /* контакты */
 .contacts {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;
@@ -66,8 +103,14 @@ ul {
   letter-spacing: 0.02em;
 }
 
+.contacts .item +.item {
+  margin-left: 30px;
+}
+
 .contacts-imail,
 .contacts-phone {
+  display: flex;
+  align-content: center;
   color: var(--title-text-color);
 }
 .contacts .contacts-imail:hover,
@@ -88,6 +131,7 @@ ul {
   margin-left: auto;
   margin-right: auto;
   width: 696px;
+
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 900;
@@ -101,33 +145,32 @@ ul {
 
 .container-hero {
   background-image: url(../images/baner.jpg);
-  width: 1600px;
+  max-width: 1600px;
   height: 600px;
-  padding: 0;
-  margin: 0, 0, 94, 0;
-  outline: 1px solid red;
+  padding-top: 200px;
 }
 
 /* button */
 
 .button {
+  display: block;
+  padding: 10px 32px;
+  border-color: var(--active-text-color);
+  border-radius: 4px;
+  border: 1px solid transparent;
+  margin-left: auto;
+  margin-right: auto;
+
   font-family: Roboto;
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
-  text-align: center;
+  text-align: center;  
   color: var(--interactive-text-color);
   background-color: var(--active-text-color);
-  /* новое */
-  margin-left: auto;
-  margin-right: auto;
-  display: inline-block;
-  border-color: var(--active-text-color);
-  border-radius: 4px;
-  padding: 10px 32px;
-  border: 1px solid transparent;
+
 }
 
 .radio-button {
@@ -139,8 +182,11 @@ ul {
   text-align: center;
   letter-spacing: 0.03em;
   text-transform: capitalize;
+  border-radius: 4px;
+  border: 1px solid transparent;
+
   color: var(--heading-text-color);
-  background: var(--interactive-text-color);
+  background: var(--bg);
 }
 .radio-button:hover,
 .radio-button:focus {
@@ -149,11 +195,39 @@ ul {
 }
 
 /* оссобенности */
+/* about */
+
+.section {
+  padding-top: 94px;
+}
+
+.about {
+  display: flex;
+}
+
+.about .item {
+  width: 270px;
+}
+
+.about .item +.item {
+  margin-left: 30px;
+}
+
+.about .img {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 270px;
+  height: 120px;
+  background-color: var(--bg);
+}
 
 .section-title {
   margin: 0;
   margin-bottom: 10;
-  padding: 0;
+  padding-top: 30px;
+ 
+
   font-family: Roboto;
   font-style: normal;
   font-weight: 700;
@@ -166,10 +240,11 @@ ul {
 
 .section-text {
   margin: 0;
-  padding: 0;
+  padding-top: 10px;
+
   font-family: Roboto;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -177,9 +252,27 @@ ul {
 }
 
 /* чем мы занимаемся */
+.work {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.work .container {
+  flex-direction: column;
+}
+
+.work .list {
+  display: flex;
+}
+
+.work .item +.item {
+  margin-left: 30px;
+}
 
 .work-title {
   margin: 0;
+  margin-bottom: 50px;
+  text-align: center;
 }
 
 .work-totel {
@@ -194,6 +287,7 @@ ul {
 
 .work-text {
   margin: 0;
+
   font-family: Roboto;
   font-style: normal;
   font-weight: 700;
@@ -207,13 +301,22 @@ ul {
 
 /* НАША КОМАНДА */
 
-.container-team {
-  /* background: #f5f4fa; */
-  width: 1600px;
-}
+  .team {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  /*background: var(--bg);
+  width: 1600px;*/
+} 
+
+ .team .container {
+  flex-direction: column;
+} 
 
 .team-title {
   margin: 0;
+  margin-bottom: 50px;
+  text-align: center;
+
   font-family: Roboto;
   font-style: normal;
   font-weight: 700;
@@ -223,6 +326,19 @@ ul {
   color: var(--heading-text-color);
 }
 
+.team .item +.item {
+  margin-left: 30px;
+}
+
+.team .item {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team .list {
+  display: flex;
+}
+
 .team-name {
   margin: 0;
   font-family: Roboto;
@@ -230,6 +346,7 @@ ul {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
+  text-align: center;
   letter-spacing: 0.03em;
   color: var(--heading-text-color);
 }
@@ -238,7 +355,7 @@ ul {
   margin: 0;
   font-family: Roboto;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
@@ -250,17 +367,32 @@ ul {
 
 footer {
   background: #2f303a;
-  width: 1600px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
+
+
+
 
 .logo-footer {
   color: var(--interactive-text-color);
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.192;
+
+  letter-spacing: 0.03em;
+}
+
+.adress-footer {
+  padding-top: 20px;
 }
 
 .adress-text {
   font-family: Roboto;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -268,9 +400,11 @@ footer {
 }
 
 .adress-imail {
+  padding-top: 9px;
+
   font-family: Roboto;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 14px;
   line-height: 1.17;
   letter-spacing: 0.03em;
@@ -278,9 +412,11 @@ footer {
 }
 
 .adress-phone {
+  padding-top: 9px;
+
   font-family: Roboto;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 14px;
   line-height: 1.17;
   letter-spacing: 0.03em;
@@ -300,6 +436,21 @@ footer {
 
 /* портфолио */
 /* main */
+/* 
+
+
+.list-items:not(:nth-last-child(-n+3)) {
+  margin-bottom:20px;
+} */
+
+.portfolio{
+  padding-top: 94px;
+}
+
+.portfolio-filter .item {
+  width: 370px;
+  height: 404px; 
+}
 
 .exaple-titel {
   font-family: Roboto;
@@ -314,7 +465,7 @@ footer {
 .example-text {
   font-family: Roboto;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
@@ -324,7 +475,7 @@ footer {
 .example-active {
   font-family: Roboto;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 18px;
   line-height: 1.56;
   letter-spacing: 0.03em;
@@ -339,10 +490,4 @@ footer {
 
 } */
 
-.container {
-  width: 1170px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-}
+

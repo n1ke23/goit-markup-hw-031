@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Студия</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@500;700;900&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
         rel="stylesheet"><!-- подключаем шрифт -->
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.7.0/modern-normalize.min.css" />
@@ -17,24 +17,24 @@
 
 <body>
     <header>
-        <div class="container">
-            <nav>
+        <div class="container flex">
+            <nav class="main-nav">
                 <a href="./index.html" class="logo link" aria-label="логотип" lang="en">
                     <span class="color">Web</span> Studio
                 </a>
-                <ul class="site-nav">
-                    <li><a href="./index.html" class="link current">Студия</a></li>
-                    <li><a href="./portfolio.html" class="link">Портфолио</a></li>
-                    <li><a href="#address" class="link">Контакты</a></li>
+                <ul class="site-nav list">
+                    <li class="item"><a href="./index.html" class="link current">Студия</a></li>
+                    <li class="item"><a href="./portfolio.html" class="link">Портфолио</a></li>
+                    <li class="item"><a href="#address" class="link">Контакты</a></li>
                 </ul>
             </nav>
 
-            <ul class="contacts">
-                <li>
+            <ul class="contacts list">
+                <li class="item">
                     <a href="#" class="contacts-imail link">
                         <img src="./images/imail.svg" alt="значек имэйла">info@devstudio.com</a>
                 </li>
-                <li>
+                <li class="item">
                     <a href="tel:+380961111111" class="contacts-phone link">
                         <img src="./images/phone.svg" alt="значек телефона">+38 096 111
                         11
@@ -48,36 +48,36 @@
     <main>
         <section class="hero container-hero">
             <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-            <a href="#" class="button link">Заказать услугу</a>
+            <button type="button" class="button">Заказать услугу </button>
         </section>
 
 
         <section class="section">
             <div class="container">
                 <h2 hidden>Оссобенности</h2>
-                <ul>
-                    <li>
-                        <img src="./images/antenna.svg" alt="Спутниковая антена">
+                <ul class="about list">
+                    <li class="item">
+                        <div class="img"><img src="./images/antenna.svg" alt="Спутниковая антена"></div>
                         <h3 class="section-title">Внимание к деталям</h3>
                         <p class="section-text">Идейные соображения, а также начало повседневной работы по формированию
                             позиции.</p>
                     </li>
-                    <li>
-                        <img src="./images/clock.svg" alt="часы">
+                    <li class="item">
+                        <div class="img"><img src="./images/clock.svg" alt="часы"></div>
                         <h3 class="section-title">Пунктуальность</h3>
                         <p class="section-text">Задача организации, в особенности же рамки и место обучения кадров
                             влечет за собой.
                         </p>
                     </li>
-                    <li>
-                        <img src="./images/diagram.svg" alt="Компьютер с диаграмой">
+                    <li class="item">
+                        <div class="img"><img src="./images/diagram.svg" alt="Компьютер с диаграмой"></div>
                         <h3 class="section-title">Планирование</h3>
                         <p class="section-text">Равным образом консультация с широким активом в значительной степени
                             обуславливает.
                         </p>
                     </li>
-                    <li>
-                        <img src="./images/gagarin.svg" alt="Астронафт">
+                    <li class="item">
+                        <div class="img"><img src="./images/gagarin.svg" alt="Астронафт"></div>
                         <h3 class="section-title">Современные технологии</h3>
                         <p class="section-text">Значимость этих проблем настолько очевидна, что реализация плановых
                             заданий.</p>
@@ -87,120 +87,114 @@
         </section>
 
 
-        <section class="work">
+        <section class="work">            
             <div class="container">
                 <h2 class="work-title">Чем мы занимаемся</h2>
-                <ul>
-                    <li>
-                        <a href="#" class="link">
-                            <img src="./images/comp.jpg" alt="ноутбук" width="370" height="294">
-                            <p class="work-text">Десктопные приложения</p>
-                        </a>
+                <ul class="list">
+                    <li class="item">                    
+                        <img src="./images/comp.jpg" alt="ноутбук" width="370" height="294">
+                        <!-- <p class="work-text">Десктопные приложения</p> -->                        
                     </li>
-                    <li>
-                        <a href="#" class="link">
-                            <img src="./images/Phone2.jpg" alt="телефон" width="370" height="294">
-                            <p class="work-text">Мобильные приложения</p>
-                        </a>
+                    <li class="item">                        
+                        <img src="./images/Phone2.jpg" alt="телефон" width="370" height="294">
+                        <!-- <p class="work-text">Мобильные приложения</p> -->                        
                     </li>
-                    <li>
-                        <a href="#" class="link">
-                            <img src="./images/monitor.jpg" alt="монитор" width="370" height="294">
-                            <p class="work-text">Дизайнерские решения</p>
-                        </a>
+                    <li class="item">                        
+                        <img src="./images/monitor.jpg" alt="монитор" width="370" height="294">
+                        <!-- <p class="work-text">Дизайнерские решения</p> -->                        
                     </li>
                 </ul>
             </div>
         </section>
 
 
-        <section class="container-team">
+        <section class="team">
             <div class="container">
                 <h2 class="team-title">Наша команда</h2>
-                <ul>
-                    <li>
+                <ul class="list">
+                    <li class="item">
                         <img src="./images/nikolay-kucherenko.jpg" alt="Игорь Демьяненко" width="270" height="260">
                         <p class="team-name">Игорь Демьяненко</p>
                         <p class="team-position" lang="en">Product Designer</p>
-                        <ul>
+                        <ul class="list">
                             <li>
-                                <a href="#" target="_blank" aria-label="сылка на instagram"></a>
+                                <a href="#" class="link" target="_blank" aria-label="сылка на instagram"></a>
                             </li>
                             <li>
-                                <a href="#" target="_blank" aria-label="сылка на twitter"></a>
+                                <a href="#" class="link" target="_blank" aria-label="сылка на twitter"></a>
                             </li>
                             <li>
-                                <a href="#" target="_blank" aria-label="сылка на facebook"></a>
+                                <a href="#" class="link" target="_blank" aria-label="сылка на facebook"></a>
                             </li>
                             <li>
-                                <a href="#" target="_blank" aria-label="сылка на linkedin"></a>
+                                <a href="#" class="link" target="_blank" aria-label="сылка на linkedin"></a>
                             </li>
                         </ul>
                     </li>
-                    <li>
+                    <li class="item">
                         <img src="./images/olga-ivanova.jpg" alt="Ольга Репина" width="270" height="260">
                         <p class="team-name">Ольга Репина</p>
                         <p class="team-position" lang="en">Frontend Developer</p>
-                        <ul>
+                        <ul class="list">
                             <li>
-                                <a href="#" target="_blank" aria-label="сылка на instagram"></a>
+                                <a href="#" class="link" target="_blank" aria-label="сылка на instagram"></a>
                             </li>
                             <li>
-                                <a href="#" target="_blank" aria-label="сылка на twitter"></a>
+                                <a href="#" class="link" target="_blank" aria-label="сылка на twitter"></a>
                             </li>
                             <li>
-                                <a href="#" target="_blank" aria-label="сылка на facebook"></a>
+                                <a href="#" class="link" target="_blank" aria-label="сылка на facebook"></a>
                             </li>
                             <li>
                                 <a href="#" target="_blank" aria-label="сылка на linkedin"></a>
                             </li>
                         </ul>
                     </li>
-                    <li>
+                    <li class="item">
                         <img src="./images/andrey-shevchenko.jpg" alt="Николай Тарасов" width="270" height="260">
                         <p class="team-name">Николай Тарасов</p>
                         <p class="team-position" lang="en">Marketing</p>
-                        <ul>
+                        <ul class="list">
                             <li>
-                                <a href="#" target="_blank" aria-label="сылка на instagram"></a>
+                                <a href="#" class="link" target="_blank" aria-label="сылка на instagram"></a>
                             </li>
                             <li>
-                                <a href="#" target="_blank" aria-label="сылка на twitter"></a>
+                                <a href="#" class="link" target="_blank" aria-label="сылка на twitter"></a>
                             </li>
                             <li>
-                                <a href="#" target="_blank" aria-label="сылка на facebook"></a>
+                                <a href="#" class="link" target="_blank" aria-label="сылка на facebook"></a>
                             </li>
                             <li>
-                                <a href="#" target="_blank" aria-label="сылка на linkedin"></a>
+                                <a href="#" class="link" target="_blank" aria-label="сылка на linkedin"></a>
                             </li>
                         </ul>
                     </li>
-                    <li>
+                    <li class="item">
                         <img src="./images/ivan-nikolaevich.jpg" alt="Михаил Ермаков" width="270" height="260">
                         <p class="team-name">Михаил Ермаков</p>
                         <p class="team-position" lang="en">UI Designer</p>
-                        <ul>
+                        <ul class="list">
                             <li>
-                                <a href="#" target="_blank" aria-label="сылка на instagram"></a>
+                                <a href="#" class="link" target="_blank" aria-label="сылка на instagram"></a>
                             </li>
                             <li>
-                                <a href="#" target="_blank" aria-label="сылка на twitter"></a>
+                                <a href="#" class="link" target="_blank" aria-label="сылка на twitter"></a>
                             </li>
                             <li>
-                                <a href="#" target="_blank" aria-label="сылка на facebook"></a>
+                                <a href="#" class="link" target="_blank" aria-label="сылка на facebook"></a>
                             </li>
                             <li>
-                                <a href="#" target="_blank" aria-label="сылка на linkedin"></a>
+                                <a href="#" class="link" target="_blank" aria-label="сылка на linkedin"></a>
                             </li>
                         </ul>
-                    </li>\
+                    </li>
                 </ul>
             </div>
         </section>
 
         <!-- <section>
             <h2 class="clients">Постоянные клиенты</h2>
-            <ul>
+            <ul class="list">
                 <li><a href="#" target="_blank"><img src="./images/logo-1.svg" alt="сылка на логотип клиента 1"></a>
                 </li>
                 <li><a href="#" target="_blank"><img src="./images/logo-2.svg" alt="сылка на логотип клиента 2"></a>
@@ -220,11 +214,11 @@
 
     <footer>
         <div class="container">
-            <div>
+            <div class="first-contaner">
                 <a href="./index.html" class="link logo-footer" aria-label="логотип" lang="en">
                     <span class="color">Web</span> Studio
                 </a>
-                <address id="address">
+                <address id="address" class="adress-footer">
                     <a href="https://goo.gl/maps/UruoTMuBv4FQU7uC8" target="_blank" class="adress-text link">г. Киев,
                         пр-т
                         Леси Украинки, 26</a><br>
@@ -233,11 +227,11 @@
                 </address>
             </div>
 
-            <!--
-            <section class="connection">h
+<!--             
+            <section class="connection">
                 <h2 hidden >присоеденяйтесь</h2>
                 <b class="connection-title">присоединяйтесь</b>
-                <ul>
+                <ul class="list">
                     <li>
                         <a href="#" target="_blank" aria-label="сылка на instagram"></a>
                     </li>
@@ -255,8 +249,8 @@
 
             <div>
                 <button type="button" class="button">Подписаться</button>
-            </div> -->
-        </div>
+            </div>-->
+        </div> 
     </footer>
 </body>
 
